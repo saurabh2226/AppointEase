@@ -1,48 +1,30 @@
-# Dependencies
-node_modules/
-venv/
+# Environment files - NEVER commit
+backend/.env
+frontend/.env
+**/*.env
+
+# Python
 __pycache__/
 *.pyc
-.pnp
-.pnp.js
-
-# Build outputs
-frontend/dist/
-*.egg-info/
-build/
-
-# Environment files
-.env
-.env.local
-.env.*.local
+*.pyo
+backend/venv/
 *.db
 
-# IDE
+# Node
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+**/*.tfvars
+
+# VS Code
 .vscode/
-.idea/
-*.swp
-*.swo
-*.sublime-*
 
 # OS
 .DS_Store
 Thumbs.db
-*.orig
-
-# Docker
-postgres_data/
-
-# Logs
-*.log
-logs/
-
-# Testing
-coverage/
-.nyc_output/
-
-# Playwright
-.playwright-mcp/
-
-# Misc
-*.tgz
-.cache/
