@@ -1,0 +1,31 @@
+name: Terraform Apply
+on:
+  workflow_dispatch:
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.8.5"
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
+          aws-region:            ap-south-1
+      - name: Apply
+        working-directory: infra/environments/prod
+        run: |
+          terraform init
+          terraform apply -auto-approve \
+            -var="db_password=${{ secrets.DB_PASSWORD }}" \
+            -var="secret_key=${{ secrets.SECRET_KEY }}" \
+            -var="ami_id=${{ secrets.AMI_ID }}" \
+            -var="alert_email=${{ secrets.ALERT_EMAIL }}" \
+            -var="smtp_user=${{ secrets.SMTP_USER }}" \
+            -var="smtp_pass=${{ secrets.SMTP_PASS }}" \
+            -var="razorpay_key_id=${{ secrets.RAZORPAY_KEY_ID }}" \
+            -var="razorpay_key_secret=${{ secrets.RAZORPAY_KEY_SECRET }}"
