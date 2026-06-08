@@ -146,3 +146,17 @@ temp/
 # ─── Alembic ──────────────────────────────────────────────────────────────────
 # Keep migration scripts; ignore compiled artefacts inside them
 backend/alembic/**/__pycache__/
+
+# ─── Documentation (non-functional) ──────────────────────────────────────────
+*.md
+*.rst
+*.txt.bak
+CHANGELOG
+CHANGELOG.*
+CHANGES
+CHANGES.*
+AUTHORS
+CONTRIBUTORS
+HISTORY
+NOTICE
+LICENSE.md
