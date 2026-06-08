@@ -1,48 +1,162 @@
-# Dependencies
-node_modules/
-venv/
+# ─── Python ───────────────────────────────────────────────────────────────────
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+pip-log.txt
+pip-delete-this-directory.txt
+MANIFEST
+
+# ─── Virtual environments ─────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ─── Testing & coverage ───────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage/
+.nyc_output/
+nosetests.xml
+coverage.xml
+*.cover
+*.lcov
+lib-cov/
+junit.xml
+test-results/
+playwright-report/
+.playwright-mcp/
+.playwright/
+*.har
+
+# ─── Node / JavaScript ────────────────────────────────────────────────────────
+node_modules/
 .pnp
 .pnp.js
+jspm_packages/
+bower_components/
 
-# Build outputs
+# ─── Build outputs ────────────────────────────────────────────────────────────
 frontend/dist/
+frontend/.next/
+frontend/.nuxt/
+frontend/.output/
 *.egg-info/
 build/
 
-# Environment files
+# ─── TypeScript ───────────────────────────────────────────────────────────────
+*.tsbuildinfo
+
+# ─── Linter / formatter caches ────────────────────────────────────────────────
+.eslintcache
+.stylelintcache
+.prettiercache
+
+# ─── Environment & secrets ────────────────────────────────────────────────────
 .env
 .env.local
 .env.*.local
-*.db
+*.env
 
-# IDE
+# ─── Databases ────────────────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ─── IDE & editors ────────────────────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
-*.sublime-*
+*.swn
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.iml
 
-# OS
+# ─── OS-generated ─────────────────────────────────────────────────────────────
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
-*.orig
+desktop.ini
+$RECYCLE.BIN/
 
-# Docker
+# ─── Docker volumes ───────────────────────────────────────────────────────────
 postgres_data/
+redis_data/
+mongo_data/
 
-# Logs
-*.log
-logs/
+# ─── Uploads / media ──────────────────────────────────────────────────────────
+uploads/
+media/
+static/collected/
 
-# Testing
-coverage/
-.nyc_output/
-
-# Playwright
-.playwright-mcp/
-
-# Misc
+# ─── Temporary & misc ─────────────────────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+*.orig
+*.pid
+*.seed
+*.pid.lock
 *.tgz
+*.zip
+*.tar.gz
+*.rar
 .cache/
+.turbo/
+.vercel/
+.netlify/
+.serverless/
+
+# ─── Alembic ──────────────────────────────────────────────────────────────────
+# Keep migration scripts; ignore compiled artefacts inside them
+backend/alembic/**/__pycache__/
+
+# ─── Documentation (non-functional) ──────────────────────────────────────────
+*.md
+*.rst
+*.txt.bak
+CHANGELOG
+CHANGELOG.*
+CHANGES
+CHANGES.*
+AUTHORS
+CONTRIBUTORS
+HISTORY
+NOTICE
+LICENSE.md
