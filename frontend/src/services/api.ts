@@ -1,7 +1,7 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios';
 import toast from 'react-hot-toast';
 
-const API_BASE_URL = '/api';
+const API_BASE_URL = 'http://appointease-alb-dev-339135736.ap-south-1.elb.amazonaws.com/api';
 
 /** Axios instance configured for the appointment API */
 const api = axios.create({
