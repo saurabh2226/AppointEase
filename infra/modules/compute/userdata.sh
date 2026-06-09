@@ -13,6 +13,7 @@ systemctl start amazon-ssm-agent
 
 # Clone repository
 git clone ${repo_url} /app
+chown -R ec2-user:ec2-user /app
 cd /app/backend
 
 # Install Python dependencies
